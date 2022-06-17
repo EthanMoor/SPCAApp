@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SPCA_app
+namespace SPCAAppGui
 {
     public class Animal
     {

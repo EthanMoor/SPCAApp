@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SPCAApp
+namespace SPCAAppGui
 {
     static class Program
     {
@@ -14,9 +14,10 @@ namespace SPCAApp
         [STAThread]
         static void Main()
         {
+            AnimalManager animalManager = new AnimalManager();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Home(animalManager));
         }
     }
 }
