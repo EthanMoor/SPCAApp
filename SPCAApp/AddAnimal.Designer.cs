@@ -29,29 +29,29 @@ namespace SPCAAppGui
         /// </summary>
         private void InitializeComponent()
         {
-            this.rtbOutput = new System.Windows.Forms.RichTextBox();
+            this.rtbOutputAddAnimal = new System.Windows.Forms.RichTextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSpecies = new System.Windows.Forms.Label();
             this.cmbbSpecies = new System.Windows.Forms.ComboBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txbName = new System.Windows.Forms.TextBox();
-            this.btnEnter = new System.Windows.Forms.Button();
+            this.btnEnterAddAnimal = new System.Windows.Forms.Button();
             this.lblAddAnimal = new System.Windows.Forms.Label();
             this.btnBackAddAnimal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // rtbOutput
+            // rtbOutputAddAnimal
             // 
-            this.rtbOutput.Location = new System.Drawing.Point(446, 12);
-            this.rtbOutput.Name = "rtbOutput";
-            this.rtbOutput.Size = new System.Drawing.Size(342, 426);
-            this.rtbOutput.TabIndex = 0;
-            this.rtbOutput.Text = "";
+            this.rtbOutputAddAnimal.Location = new System.Drawing.Point(446, 12);
+            this.rtbOutputAddAnimal.Name = "rtbOutputAddAnimal";
+            this.rtbOutputAddAnimal.Size = new System.Drawing.Size(342, 426);
+            this.rtbOutputAddAnimal.TabIndex = 0;
+            this.rtbOutputAddAnimal.Text = "";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(19, 120, 198);
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitle.Location = new System.Drawing.Point(12, 9);
@@ -75,11 +75,13 @@ namespace SPCAAppGui
             // 
             this.cmbbSpecies.FormattingEnabled = true;
             this.cmbbSpecies.Items.AddRange(new object[] {
-            "Bird",
             "Cat",
             "Dog",
             "Guinea Pig",
-            "Lizard"});
+            "Horse",
+            "Bunny",
+            "Chicken",
+            "Duck"});
             this.cmbbSpecies.Location = new System.Drawing.Point(16, 62);
             this.cmbbSpecies.Name = "cmbbSpecies";
             this.cmbbSpecies.Size = new System.Drawing.Size(146, 21);
@@ -103,17 +105,17 @@ namespace SPCAAppGui
             this.txbName.Size = new System.Drawing.Size(146, 20);
             this.txbName.TabIndex = 7;
             // 
-            // btnEnter
+            // btnEnterAddAnimal
             // 
-            this.btnEnter.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnEnter.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(12, 378);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(428, 60);
-            this.btnEnter.TabIndex = 12;
-            this.btnEnter.Text = "Enter";
-            this.btnEnter.UseVisualStyleBackColor = false;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            this.btnEnterAddAnimal.BackColor = System.Drawing.Color.FromArgb(255, 155, 0);
+            this.btnEnterAddAnimal.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnterAddAnimal.Location = new System.Drawing.Point(12, 378);
+            this.btnEnterAddAnimal.Name = "btnEnterAddAnimal";
+            this.btnEnterAddAnimal.Size = new System.Drawing.Size(428, 60);
+            this.btnEnterAddAnimal.TabIndex = 12;
+            this.btnEnterAddAnimal.Text = "Enter";
+            this.btnEnterAddAnimal.UseVisualStyleBackColor = false;
+            this.btnEnterAddAnimal.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // lblAddAnimal
             // 
@@ -143,13 +145,13 @@ namespace SPCAAppGui
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBackAddAnimal);
             this.Controls.Add(this.lblAddAnimal);
-            this.Controls.Add(this.btnEnter);
+            this.Controls.Add(this.btnEnterAddAnimal);
             this.Controls.Add(this.txbName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.cmbbSpecies);
             this.Controls.Add(this.lblSpecies);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.rtbOutput);
+            this.Controls.Add(this.rtbOutputAddAnimal);
             this.Name = "AddAnimal";
             this.Text = "AddAnimal";
             this.ResumeLayout(false);
@@ -159,13 +161,13 @@ namespace SPCAAppGui
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox rtbOutput;
+        private System.Windows.Forms.RichTextBox rtbOutputAddAnimal;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblSpecies;
         private System.Windows.Forms.ComboBox cmbbSpecies;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txbName;
-        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Button btnEnterAddAnimal;
         private System.Windows.Forms.Label lblAddAnimal;
         private System.Windows.Forms.Button btnBackAddAnimal;
     }

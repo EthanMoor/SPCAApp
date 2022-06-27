@@ -24,5 +24,20 @@ namespace SPCAAppGui
             return animals[animals.Count - 1].AddAnimalReceipt();
         }
 
+        public string AnimalReceipts()
+        {
+            string receipts = "";
+            foreach (Animal animal in animals)
+            {
+                receipts += animal.AddAnimalReceipt() + "\n";
+            }
+            return receipts;
+        }
+
+        public List<Animal> GetAnimals()
+        {
+            return animals;
+        }
+
     }
 }

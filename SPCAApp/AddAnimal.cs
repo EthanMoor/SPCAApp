@@ -24,7 +24,7 @@ namespace SPCAAppGui
             Animal newAnimal = new Animal(txbName.Text, cmbbSpecies.Text);
             animalManager.AddAnimal(newAnimal);
 
-            rtbOutput.Text = animalManager.RecentlyAddedNewAnimal();
+            rtbOutputAddAnimal.Text = animalManager.RecentlyAddedNewAnimal();
         }
 
         private void btnBackAddAnimal_Click(object sender, EventArgs e)

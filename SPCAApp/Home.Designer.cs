@@ -34,6 +34,7 @@ namespace SPCAAppGui
             this.btnAddAnimal = new System.Windows.Forms.Button();
             this.btnAddConsumption = new System.Windows.Forms.Button();
             this.btnViewStats = new System.Windows.Forms.Button();
+            this.lblRequired = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -89,11 +90,21 @@ namespace SPCAAppGui
             this.btnViewStats.UseVisualStyleBackColor = true;
             this.btnViewStats.Click += new System.EventHandler(this.btnViewStats_Click);
             // 
+            // lblRequired
+            // 
+            this.lblRequired.AutoSize = true;
+            this.lblRequired.Location = new System.Drawing.Point(12, 387);
+            this.lblRequired.Name = "lblRequired";
+            this.lblRequired.Size = new System.Drawing.Size(181, 13);
+            this.lblRequired.TabIndex = 7;
+            this.lblRequired.Text = "*Required for Consumption and Stats";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblRequired);
             this.Controls.Add(this.btnViewStats);
             this.Controls.Add(this.btnAddConsumption);
             this.Controls.Add(this.btnAddAnimal);
@@ -114,5 +125,6 @@ namespace SPCAAppGui
         private System.Windows.Forms.Button btnAddAnimal;
         private System.Windows.Forms.Button btnAddConsumption;
         private System.Windows.Forms.Button btnViewStats;
+        private System.Windows.Forms.Label lblRequired;
     }
 }
