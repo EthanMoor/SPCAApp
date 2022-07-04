@@ -56,6 +56,9 @@ namespace SPCAAppGui
             rtbOutputAddConsumption.Text = dgvAnimalTable.SelectedRows[0].Cells[0].Value.ToString();
         }
 
-        
+        private void btnEnterAddConsumption_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

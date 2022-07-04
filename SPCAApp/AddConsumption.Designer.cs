@@ -102,6 +102,7 @@ namespace SPCAAppGui
             this.btnEnterAddConsumption.TabIndex = 17;
             this.btnEnterAddConsumption.Text = "Enter";
             this.btnEnterAddConsumption.UseVisualStyleBackColor = false;
+            this.btnEnterAddConsumption.Click += new System.EventHandler(this.btnEnterAddConsumption_Click);
             // 
             // lblAddConsumptionWhichAnimal
             // 
