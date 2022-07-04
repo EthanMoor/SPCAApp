@@ -23,6 +23,7 @@ namespace SPCAAppGui
         {
             Animal newAnimal = new Animal(txbName.Text, cmbbSpecies.Text);
             animalManager.AddAnimal(newAnimal);
+            
 
             rtbOutputAddAnimal.Text = animalManager.RecentlyAddedNewAnimal();
         }
@@ -33,6 +34,20 @@ namespace SPCAAppGui
             Home window = new Home(animalManager);
             window.FormClosed += (s, args) => this.Close();
             window.Show();
+        }
+
+        private void btnAddAnimalClear_Click(object sender, EventArgs e)
+        {
+            cmbbSpecies.Text = "";
+            txbName.Text = "";
+        }
+
+        private void AddAnimal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

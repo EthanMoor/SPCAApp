@@ -11,8 +11,8 @@ namespace SPCAAppGui
         private string species;
         
         private readonly Dictionary<DateTime, int> animalConsumption = new Dictionary<DateTime, int>();
-       
 
+        private int id;
 
         // Constructor - Constructs an object by assigning values to the propities
 
@@ -35,6 +35,11 @@ namespace SPCAAppGui
             return species;
         }
 
+        public int GetId()
+        {
+            return id;
+        }
+
         // Set Methods - Assigns a value to a private variable
 
 
@@ -46,6 +51,11 @@ namespace SPCAAppGui
         public void SetSpecies(string spcs)
         {
             species = spcs;
+        }
+
+        public void SetId(int idee)
+        {
+            id = idee;
         }
 
 

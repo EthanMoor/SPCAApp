@@ -7,7 +7,7 @@ namespace SPCAAppGui
     public class AnimalManager
     {
         private List<Animal> animals = new List<Animal>();
-
+        private int nextId = 1;
 
         public AnimalManager()
         {
@@ -17,6 +17,9 @@ namespace SPCAAppGui
         public void AddAnimal(Animal animal)
         {
             animals.Add(animal);
+
+            animals[animals.Count - 1].SetId(nextId);
+            this.nextId += 1;
         }
 
         public string RecentlyAddedNewAnimal()

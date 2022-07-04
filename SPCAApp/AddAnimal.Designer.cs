@@ -38,6 +38,7 @@ namespace SPCAAppGui
             this.btnEnterAddAnimal = new System.Windows.Forms.Button();
             this.lblAddAnimal = new System.Windows.Forms.Label();
             this.btnBackAddAnimal = new System.Windows.Forms.Button();
+            this.btnAddAnimalClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rtbOutputAddAnimal
@@ -51,7 +52,7 @@ namespace SPCAAppGui
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(19, 120, 198);
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(120)))), ((int)(((byte)(198)))));
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitle.Location = new System.Drawing.Point(12, 9);
@@ -107,7 +108,8 @@ namespace SPCAAppGui
             // 
             // btnEnterAddAnimal
             // 
-            this.btnEnterAddAnimal.BackColor = System.Drawing.Color.FromArgb(255, 155, 0);
+            this.btnEnterAddAnimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
+            this.btnEnterAddAnimal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnterAddAnimal.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnterAddAnimal.Location = new System.Drawing.Point(12, 378);
             this.btnEnterAddAnimal.Name = "btnEnterAddAnimal";
@@ -130,6 +132,7 @@ namespace SPCAAppGui
             // 
             // btnBackAddAnimal
             // 
+            this.btnBackAddAnimal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBackAddAnimal.Location = new System.Drawing.Point(365, 12);
             this.btnBackAddAnimal.Name = "btnBackAddAnimal";
             this.btnBackAddAnimal.Size = new System.Drawing.Size(75, 27);
@@ -138,11 +141,24 @@ namespace SPCAAppGui
             this.btnBackAddAnimal.UseVisualStyleBackColor = true;
             this.btnBackAddAnimal.Click += new System.EventHandler(this.btnBackAddAnimal_Click);
             // 
+            // btnAddAnimalClear
+            // 
+            this.btnAddAnimalClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddAnimalClear.Location = new System.Drawing.Point(365, 45);
+            this.btnAddAnimalClear.Name = "btnAddAnimalClear";
+            this.btnAddAnimalClear.Size = new System.Drawing.Size(75, 27);
+            this.btnAddAnimalClear.TabIndex = 15;
+            this.btnAddAnimalClear.Text = "Clear";
+            this.btnAddAnimalClear.UseVisualStyleBackColor = true;
+            this.btnAddAnimalClear.Click += new System.EventHandler(this.btnAddAnimalClear_Click);
+            // 
             // AddAnimal
             // 
+            this.AcceptButton = this.btnEnterAddAnimal;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAddAnimalClear);
             this.Controls.Add(this.btnBackAddAnimal);
             this.Controls.Add(this.lblAddAnimal);
             this.Controls.Add(this.btnEnterAddAnimal);
@@ -154,6 +170,7 @@ namespace SPCAAppGui
             this.Controls.Add(this.rtbOutputAddAnimal);
             this.Name = "AddAnimal";
             this.Text = "AddAnimal";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddAnimal_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +187,7 @@ namespace SPCAAppGui
         private System.Windows.Forms.Button btnEnterAddAnimal;
         private System.Windows.Forms.Label lblAddAnimal;
         private System.Windows.Forms.Button btnBackAddAnimal;
+        private System.Windows.Forms.Button btnAddAnimalClear;
     }
 }
 

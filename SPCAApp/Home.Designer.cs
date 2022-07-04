@@ -43,7 +43,7 @@ namespace SPCAAppGui
             this.lblTitle.BackColor = System.Drawing.SystemColors.Highlight;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblTitle.Location = new System.Drawing.Point(343, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(87, 21);
             this.lblTitle.TabIndex = 2;
@@ -54,7 +54,7 @@ namespace SPCAAppGui
             this.lblHome.AutoSize = true;
             this.lblHome.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHome.Location = new System.Drawing.Point(105, 15);
+            this.lblHome.Location = new System.Drawing.Point(366, 39);
             this.lblHome.Name = "lblHome";
             this.lblHome.Size = new System.Drawing.Size(39, 13);
             this.lblHome.TabIndex = 3;
@@ -62,7 +62,8 @@ namespace SPCAAppGui
             // 
             // btnAddAnimal
             // 
-            this.btnAddAnimal.Location = new System.Drawing.Point(12, 403);
+            this.btnAddAnimal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddAnimal.Location = new System.Drawing.Point(273, 55);
             this.btnAddAnimal.Name = "btnAddAnimal";
             this.btnAddAnimal.Size = new System.Drawing.Size(231, 35);
             this.btnAddAnimal.TabIndex = 4;
@@ -72,9 +73,10 @@ namespace SPCAAppGui
             // 
             // btnAddConsumption
             // 
-            this.btnAddConsumption.Location = new System.Drawing.Point(249, 403);
+            this.btnAddConsumption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddConsumption.Location = new System.Drawing.Point(273, 96);
             this.btnAddConsumption.Name = "btnAddConsumption";
-            this.btnAddConsumption.Size = new System.Drawing.Size(299, 35);
+            this.btnAddConsumption.Size = new System.Drawing.Size(231, 35);
             this.btnAddConsumption.TabIndex = 5;
             this.btnAddConsumption.Text = "Add Consumption";
             this.btnAddConsumption.UseVisualStyleBackColor = true;
@@ -82,9 +84,10 @@ namespace SPCAAppGui
             // 
             // btnViewStats
             // 
-            this.btnViewStats.Location = new System.Drawing.Point(554, 403);
+            this.btnViewStats.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewStats.Location = new System.Drawing.Point(273, 137);
             this.btnViewStats.Name = "btnViewStats";
-            this.btnViewStats.Size = new System.Drawing.Size(234, 35);
+            this.btnViewStats.Size = new System.Drawing.Size(231, 35);
             this.btnViewStats.TabIndex = 6;
             this.btnViewStats.Text = "View Stats";
             this.btnViewStats.UseVisualStyleBackColor = true;
@@ -93,7 +96,7 @@ namespace SPCAAppGui
             // lblRequired
             // 
             this.lblRequired.AutoSize = true;
-            this.lblRequired.Location = new System.Drawing.Point(12, 387);
+            this.lblRequired.Location = new System.Drawing.Point(510, 55);
             this.lblRequired.Name = "lblRequired";
             this.lblRequired.Size = new System.Drawing.Size(181, 13);
             this.lblRequired.TabIndex = 7;
