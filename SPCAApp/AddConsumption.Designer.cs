@@ -37,13 +37,12 @@ namespace SPCAAppGui
             this.btnEnterAddConsumption = new System.Windows.Forms.Button();
             this.lblAddConsumptionWhichAnimal = new System.Windows.Forms.Label();
             this.lblAddConsumptionWhichDay = new System.Windows.Forms.Label();
-            this.dgvAnimalTable = new System.Windows.Forms.DataGridView();
             this.lblAddConsumptionHowMuchEaten = new System.Windows.Forms.Label();
             this.nudAddConsumptionHowMuchEaten = new System.Windows.Forms.NumericUpDown();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.animalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimalTable)).BeginInit();
+            this.listviewTable = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.nudAddConsumptionHowMuchEaten)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource1)).BeginInit();
@@ -126,17 +125,6 @@ namespace SPCAAppGui
             this.lblAddConsumptionWhichDay.TabIndex = 19;
             this.lblAddConsumptionWhichDay.Text = "Which Day?";
             // 
-            // dgvAnimalTable
-            // 
-            this.dgvAnimalTable.AllowUserToOrderColumns = true;
-            this.dgvAnimalTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnimalTable.Location = new System.Drawing.Point(12, 63);
-            this.dgvAnimalTable.Name = "dgvAnimalTable";
-            this.dgvAnimalTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAnimalTable.Size = new System.Drawing.Size(361, 99);
-            this.dgvAnimalTable.TabIndex = 20;
-            this.dgvAnimalTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnimalTable_CellContentClick);
-            // 
             // lblAddConsumptionHowMuchEaten
             // 
             this.lblAddConsumptionHowMuchEaten.AutoSize = true;
@@ -185,15 +173,25 @@ namespace SPCAAppGui
             // 
             this.animalBindingSource1.DataSource = typeof(SPCAAppGui.Animal);
             // 
+            // listviewTable
+            // 
+            this.listviewTable.FullRowSelect = true;
+            this.listviewTable.HideSelection = false;
+            this.listviewTable.Location = new System.Drawing.Point(16, 64);
+            this.listviewTable.Name = "listviewTable";
+            this.listviewTable.Size = new System.Drawing.Size(357, 98);
+            this.listviewTable.TabIndex = 24;
+            this.listviewTable.UseCompatibleStateImageBehavior = false;
+            // 
             // AddConsumption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listviewTable);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.nudAddConsumptionHowMuchEaten);
             this.Controls.Add(this.lblAddConsumptionHowMuchEaten);
-            this.Controls.Add(this.dgvAnimalTable);
             this.Controls.Add(this.lblAddConsumptionWhichDay);
             this.Controls.Add(this.lblAddConsumptionWhichAnimal);
             this.Controls.Add(this.btnEnterAddConsumption);
@@ -203,7 +201,6 @@ namespace SPCAAppGui
             this.Controls.Add(this.lblTitle);
             this.Name = "AddConsumption";
             this.Text = "AddConsumption";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimalTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAddConsumptionHowMuchEaten)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource1)).EndInit();
@@ -221,11 +218,11 @@ namespace SPCAAppGui
         private System.Windows.Forms.Button btnEnterAddConsumption;
         private System.Windows.Forms.Label lblAddConsumptionWhichAnimal;
         private System.Windows.Forms.Label lblAddConsumptionWhichDay;
-        private System.Windows.Forms.DataGridView dgvAnimalTable;
         private System.Windows.Forms.BindingSource animalBindingSource;
         private System.Windows.Forms.BindingSource animalBindingSource1;
         private System.Windows.Forms.Label lblAddConsumptionHowMuchEaten;
         private System.Windows.Forms.NumericUpDown nudAddConsumptionHowMuchEaten;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ListView listviewTable;
     }
 }

@@ -13,34 +13,53 @@ namespace SPCAAppGui
     public partial class AddConsumption : Form
     {
         AnimalManager animalManager;
+        private DataTable dt;
+        private DataView dv;
+        private static int selectedID = -1;
         public AddConsumption(AnimalManager animalManager)
         {
             this.animalManager = animalManager;
             InitializeComponent();
 
-            //rtbOutputAddConsumption.Text = animalManager.AnimalReceipts();
 
 
-            //This will create a custom datasource for the DataGridView.
-            var transactionsDataSource = animalManager.GetAnimals().Select(x => new
+            // List View properties
+            listviewTable.View = View.Details;
+            listviewTable.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
+
+            // Adding Columns
+            listviewTable.Columns.Add("ID");
+            listviewTable.Columns.Add("Name");
+            listviewTable.Columns.Add("Species");
+
+            // Initialise Datatable and add Columns
+            dt = new DataTable();
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Species");
+
+            // Getting DataList from Animal Manager
+            List<Animal> animals = this.animalManager.GetAnimals();
+
+            foreach (var animal in animals)
             {
-                Id = x.GetId(),
-                Name = x.GetName(),
-                Species = x.GetSpecies(),
-        
-            }).ToList();
+                dt.Rows.Add(animal.GetId(), animal.GetName(), animal.GetSpecies());
+            }
 
-           
-            //foreach (var item in transactionsDataSource)
-            //{
-             //   dgvAnimalTable.Rows.Add(item.name, item.species);
-            //}
+            // Fill Datatable
+            dv = new DataView(dt);
+            PopulateListViewTable(dv);
 
-           
-            //This will assign the datasource. All the columns you listed will show up, and every row
-            //of data in the list will populate into the DataGridView.
-            dgvAnimalTable.DataSource = transactionsDataSource;
+        }
 
+        private void PopulateListViewTable(DataView dv)
+        {
+            listviewTable.Items.Clear();
+            foreach (DataRow row in dv.ToTable().Rows)
+            {
+                listviewTable.Items.Add(new ListViewItem(new string[] { row[0].ToString(), row[1].ToString(), row[2].ToString()}));
+            }
         }
 
         private void btnBackAddConsumption_Click(object sender, EventArgs e)
@@ -49,11 +68,6 @@ namespace SPCAAppGui
             Home window = new Home(animalManager);
             window.FormClosed += (s, args) => this.Close();
             window.Show();
-        }
-
-        private void dgvAnimalTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            rtbOutputAddConsumption.Text = dgvAnimalTable.SelectedRows[0].Cells[0].Value.ToString();
         }
 
         private void btnEnterAddConsumption_Click(object sender, EventArgs e)
