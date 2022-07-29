@@ -42,5 +42,37 @@ namespace SPCAAppGui
             return animals;
         }
 
+
+        public int FindAnimal(int id)
+        {
+            for (int animalIndex = 0; animalIndex < animals.Count; animalIndex++)
+            {
+                if (id == animals[animalIndex].GetId())
+                {
+                    return animalIndex;
+                }
+            }
+
+            return -1;
+        }
+
+        public void AddConsumption(int id, DateTime date, int consumption)
+        {
+            int foundIndex = FindAnimal(id);
+
+            if (foundIndex != -1)
+            {
+
+                animals[foundIndex].AddConsumptionToAnimal(date, consumption);
+
+            }
+        }
+
+        public string GetRecentlyAddedConsumption(DateTime date, int id)
+        {
+            return animals[FindAnimal(id)].RecentlyAddedConsumption(date);
+        }
+
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace SPCAAppGui
@@ -68,6 +69,19 @@ namespace SPCAAppGui
         }
 
 
+
+        public void AddConsumptionToAnimal(DateTime date, int consumption)
+        {
+            animalConsumption.Add(date, consumption);
+
+
+        }
+
+
+        public string RecentlyAddedConsumption(DateTime date)
+        {
+            return $"{name}\n{species}\n{date.ToString("D", CultureInfo.GetCultureInfo("en-US"))}\n{animalConsumption[date]}g";
+        }
 
     }
 

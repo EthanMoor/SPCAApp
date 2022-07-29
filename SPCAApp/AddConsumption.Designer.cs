@@ -39,10 +39,10 @@ namespace SPCAAppGui
             this.lblAddConsumptionWhichDay = new System.Windows.Forms.Label();
             this.lblAddConsumptionHowMuchEaten = new System.Windows.Forms.Label();
             this.nudAddConsumptionHowMuchEaten = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpAddConsumption = new System.Windows.Forms.DateTimePicker();
+            this.listviewTable = new System.Windows.Forms.ListView();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.animalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.listviewTable = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.nudAddConsumptionHowMuchEaten)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalBindingSource1)).BeginInit();
@@ -51,7 +51,7 @@ namespace SPCAAppGui
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(120)))), ((int)(((byte)(198)))));
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitle.Location = new System.Drawing.Point(12, 9);
@@ -92,7 +92,7 @@ namespace SPCAAppGui
             // 
             // btnEnterAddConsumption
             // 
-            this.btnEnterAddConsumption.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnEnterAddConsumption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
             this.btnEnterAddConsumption.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnterAddConsumption.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnterAddConsumption.Location = new System.Drawing.Point(12, 378);
@@ -130,7 +130,7 @@ namespace SPCAAppGui
             this.lblAddConsumptionHowMuchEaten.AutoSize = true;
             this.lblAddConsumptionHowMuchEaten.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddConsumptionHowMuchEaten.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblAddConsumptionHowMuchEaten.Location = new System.Drawing.Point(192, 165);
+            this.lblAddConsumptionHowMuchEaten.Location = new System.Drawing.Point(228, 165);
             this.lblAddConsumptionHowMuchEaten.Name = "lblAddConsumptionHowMuchEaten";
             this.lblAddConsumptionHowMuchEaten.Size = new System.Drawing.Size(158, 19);
             this.lblAddConsumptionHowMuchEaten.TabIndex = 21;
@@ -138,7 +138,7 @@ namespace SPCAAppGui
             // 
             // nudAddConsumptionHowMuchEaten
             // 
-            this.nudAddConsumptionHowMuchEaten.Location = new System.Drawing.Point(196, 187);
+            this.nudAddConsumptionHowMuchEaten.Location = new System.Drawing.Point(232, 187);
             this.nudAddConsumptionHowMuchEaten.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -150,7 +150,7 @@ namespace SPCAAppGui
             0,
             0});
             this.nudAddConsumptionHowMuchEaten.Name = "nudAddConsumptionHowMuchEaten";
-            this.nudAddConsumptionHowMuchEaten.Size = new System.Drawing.Size(177, 20);
+            this.nudAddConsumptionHowMuchEaten.Size = new System.Drawing.Size(208, 20);
             this.nudAddConsumptionHowMuchEaten.TabIndex = 22;
             this.nudAddConsumptionHowMuchEaten.Value = new decimal(new int[] {
             1,
@@ -158,12 +158,24 @@ namespace SPCAAppGui
             0,
             0});
             // 
-            // dateTimePicker1
+            // dtpAddConsumption
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 187);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(177, 20);
-            this.dateTimePicker1.TabIndex = 23;
+            this.dtpAddConsumption.Location = new System.Drawing.Point(16, 187);
+            this.dtpAddConsumption.Name = "dtpAddConsumption";
+            this.dtpAddConsumption.Size = new System.Drawing.Size(208, 20);
+            this.dtpAddConsumption.TabIndex = 23;
+            // 
+            // listviewTable
+            // 
+            this.listviewTable.FullRowSelect = true;
+            this.listviewTable.HideSelection = false;
+            this.listviewTable.Location = new System.Drawing.Point(16, 64);
+            this.listviewTable.MultiSelect = false;
+            this.listviewTable.Name = "listviewTable";
+            this.listviewTable.Size = new System.Drawing.Size(424, 98);
+            this.listviewTable.TabIndex = 24;
+            this.listviewTable.UseCompatibleStateImageBehavior = false;
+            this.listviewTable.SelectedIndexChanged += new System.EventHandler(this.listviewTable_SelectedIndexChanged);
             // 
             // animalBindingSource
             // 
@@ -173,23 +185,13 @@ namespace SPCAAppGui
             // 
             this.animalBindingSource1.DataSource = typeof(SPCAAppGui.Animal);
             // 
-            // listviewTable
-            // 
-            this.listviewTable.FullRowSelect = true;
-            this.listviewTable.HideSelection = false;
-            this.listviewTable.Location = new System.Drawing.Point(16, 64);
-            this.listviewTable.Name = "listviewTable";
-            this.listviewTable.Size = new System.Drawing.Size(357, 98);
-            this.listviewTable.TabIndex = 24;
-            this.listviewTable.UseCompatibleStateImageBehavior = false;
-            // 
             // AddConsumption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listviewTable);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpAddConsumption);
             this.Controls.Add(this.nudAddConsumptionHowMuchEaten);
             this.Controls.Add(this.lblAddConsumptionHowMuchEaten);
             this.Controls.Add(this.lblAddConsumptionWhichDay);
@@ -222,7 +224,7 @@ namespace SPCAAppGui
         private System.Windows.Forms.BindingSource animalBindingSource1;
         private System.Windows.Forms.Label lblAddConsumptionHowMuchEaten;
         private System.Windows.Forms.NumericUpDown nudAddConsumptionHowMuchEaten;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpAddConsumption;
         private System.Windows.Forms.ListView listviewTable;
     }
 }

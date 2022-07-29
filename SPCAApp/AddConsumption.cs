@@ -72,7 +72,21 @@ namespace SPCAAppGui
 
         private void btnEnterAddConsumption_Click(object sender, EventArgs e)
         {
+            animalManager.AddConsumption(selectedID, dtpAddConsumption.Value, Convert.ToInt32(nudAddConsumptionHowMuchEaten.Value));
 
+            rtbOutputAddConsumption.Text = animalManager.GetRecentlyAddedConsumption(dtpAddConsumption.Value, selectedID);
+        }
+
+        private void listviewTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listviewTable.SelectedItems.Count>0)
+            {
+                 selectedID = Convert.ToInt32(listviewTable.SelectedItems[0].Text);
+
+                 //MessageBox.Show(selectedID + "");
+            }
+           
+           
         }
     }
 }
