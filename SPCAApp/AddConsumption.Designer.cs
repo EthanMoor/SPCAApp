@@ -40,7 +40,7 @@ namespace SPCAAppGui
             this.lblAddConsumptionHowMuchEaten = new System.Windows.Forms.Label();
             this.nudAddConsumptionHowMuchEaten = new System.Windows.Forms.NumericUpDown();
             this.dtpAddConsumption = new System.Windows.Forms.DateTimePicker();
-            this.listviewTable = new System.Windows.Forms.ListView();
+            this.listviewAddConsumption = new System.Windows.Forms.ListView();
             this.animalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.animalBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudAddConsumptionHowMuchEaten)).BeginInit();
@@ -165,17 +165,17 @@ namespace SPCAAppGui
             this.dtpAddConsumption.Size = new System.Drawing.Size(208, 20);
             this.dtpAddConsumption.TabIndex = 23;
             // 
-            // listviewTable
+            // listviewAddConsumption
             // 
-            this.listviewTable.FullRowSelect = true;
-            this.listviewTable.HideSelection = false;
-            this.listviewTable.Location = new System.Drawing.Point(16, 64);
-            this.listviewTable.MultiSelect = false;
-            this.listviewTable.Name = "listviewTable";
-            this.listviewTable.Size = new System.Drawing.Size(424, 98);
-            this.listviewTable.TabIndex = 24;
-            this.listviewTable.UseCompatibleStateImageBehavior = false;
-            this.listviewTable.SelectedIndexChanged += new System.EventHandler(this.listviewTable_SelectedIndexChanged);
+            this.listviewAddConsumption.FullRowSelect = true;
+            this.listviewAddConsumption.HideSelection = false;
+            this.listviewAddConsumption.Location = new System.Drawing.Point(16, 64);
+            this.listviewAddConsumption.MultiSelect = false;
+            this.listviewAddConsumption.Name = "listviewAddConsumption";
+            this.listviewAddConsumption.Size = new System.Drawing.Size(424, 98);
+            this.listviewAddConsumption.TabIndex = 24;
+            this.listviewAddConsumption.UseCompatibleStateImageBehavior = false;
+            this.listviewAddConsumption.SelectedIndexChanged += new System.EventHandler(this.listviewTable_SelectedIndexChanged);
             // 
             // animalBindingSource
             // 
@@ -187,10 +187,11 @@ namespace SPCAAppGui
             // 
             // AddConsumption
             // 
+            this.AcceptButton = this.btnEnterAddConsumption;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listviewTable);
+            this.Controls.Add(this.listviewAddConsumption);
             this.Controls.Add(this.dtpAddConsumption);
             this.Controls.Add(this.nudAddConsumptionHowMuchEaten);
             this.Controls.Add(this.lblAddConsumptionHowMuchEaten);
@@ -225,6 +226,6 @@ namespace SPCAAppGui
         private System.Windows.Forms.Label lblAddConsumptionHowMuchEaten;
         private System.Windows.Forms.NumericUpDown nudAddConsumptionHowMuchEaten;
         private System.Windows.Forms.DateTimePicker dtpAddConsumption;
-        private System.Windows.Forms.ListView listviewTable;
+        private System.Windows.Forms.ListView listviewAddConsumption;
     }
 }

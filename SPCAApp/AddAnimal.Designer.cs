@@ -170,7 +170,6 @@ namespace SPCAAppGui
             this.Controls.Add(this.rtbOutputAddAnimal);
             this.Name = "AddAnimal";
             this.Text = "AddAnimal";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddAnimal_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

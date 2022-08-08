@@ -24,14 +24,14 @@ namespace SPCAAppGui
 
 
             // List View properties
-            listviewTable.View = View.Details;
-            listviewTable.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listviewAddConsumption.View = View.Details;
+            listviewAddConsumption.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
 
             // Adding Columns
-            listviewTable.Columns.Add("ID");
-            listviewTable.Columns.Add("Name");
-            listviewTable.Columns.Add("Species");
+            listviewAddConsumption.Columns.Add("ID");
+            listviewAddConsumption.Columns.Add("Name");
+            listviewAddConsumption.Columns.Add("Species");
 
             // Initialise Datatable and add Columns
             dt = new DataTable();
@@ -53,12 +53,16 @@ namespace SPCAAppGui
 
         }
 
-        private void PopulateListViewTable(DataView dv)
+        public AddConsumption()
         {
-            listviewTable.Items.Clear();
+        }
+
+        public void PopulateListViewTable(DataView dv)
+        {
+            listviewAddConsumption.Items.Clear();
             foreach (DataRow row in dv.ToTable().Rows)
             {
-                listviewTable.Items.Add(new ListViewItem(new string[] { row[0].ToString(), row[1].ToString(), row[2].ToString()}));
+                listviewAddConsumption.Items.Add(new ListViewItem(new string[] { row[0].ToString(), row[1].ToString(), row[2].ToString()}));
             }
         }
 
@@ -79,9 +83,9 @@ namespace SPCAAppGui
 
         private void listviewTable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listviewTable.SelectedItems.Count>0)
+            if (listviewAddConsumption.SelectedItems.Count>0)
             {
-                 selectedID = Convert.ToInt32(listviewTable.SelectedItems[0].Text);
+                 selectedID = Convert.ToInt32(listviewAddConsumption.SelectedItems[0].Text);
 
                  //MessageBox.Show(selectedID + "");
             }

@@ -62,9 +62,7 @@ namespace SPCAAppGui
 
             if (foundIndex != -1)
             {
-
                 animals[foundIndex].AddConsumptionToAnimal(date, consumption);
-
             }
         }
 
@@ -73,6 +71,6 @@ namespace SPCAAppGui
             return animals[FindAnimal(id)].RecentlyAddedConsumption(date);
         }
 
-
+        
     }
 }

@@ -63,7 +63,9 @@ namespace SPCAAppGui
         public string AddAnimalReceipt()
         {
             string addAnimalReceipt = $"Animal name: {name}\n" +
-                $"Species: {species}";
+                $"Species: {species}\n" +
+                "\n" +
+                "This animal has been succesfully added";
 
             return addAnimalReceipt;
         }
@@ -80,7 +82,7 @@ namespace SPCAAppGui
 
         public string RecentlyAddedConsumption(DateTime date)
         {
-            return $"{name}\n{species}\n{date.ToString("D", CultureInfo.GetCultureInfo("en-US"))}\n{animalConsumption[date]}g";
+            return $"Name: {name}\nSpecies: {species}\nDate: {date.ToString("D", CultureInfo.GetCultureInfo("en-US"))}\nHow much eaten: {animalConsumption[date]}g";
         }
 
     }
