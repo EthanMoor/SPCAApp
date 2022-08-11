@@ -33,7 +33,6 @@ namespace SPCAAppGui
             this.btnBackAnimalStats = new System.Windows.Forms.Button();
             this.lblAnimalStats = new System.Windows.Forms.Label();
             this.lblSearchBy = new System.Windows.Forms.Label();
-            this.btnEnterAnimalStats = new System.Windows.Forms.Button();
             this.txbSearch = new System.Windows.Forms.TextBox();
             this.listviewStats = new System.Windows.Forms.ListView();
             this.SuspendLayout();
@@ -76,24 +75,12 @@ namespace SPCAAppGui
             // 
             this.lblSearchBy.AutoSize = true;
             this.lblSearchBy.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchBy.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSearchBy.ForeColor = System.Drawing.Color.Black;
             this.lblSearchBy.Location = new System.Drawing.Point(12, 42);
             this.lblSearchBy.Name = "lblSearchBy";
             this.lblSearchBy.Size = new System.Drawing.Size(233, 19);
             this.lblSearchBy.TabIndex = 16;
             this.lblSearchBy.Text = "What do you want to search by?";
-            // 
-            // btnEnterAnimalStats
-            // 
-            this.btnEnterAnimalStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
-            this.btnEnterAnimalStats.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnterAnimalStats.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnterAnimalStats.Location = new System.Drawing.Point(12, 378);
-            this.btnEnterAnimalStats.Name = "btnEnterAnimalStats";
-            this.btnEnterAnimalStats.Size = new System.Drawing.Size(428, 60);
-            this.btnEnterAnimalStats.TabIndex = 18;
-            this.btnEnterAnimalStats.Text = "Enter";
-            this.btnEnterAnimalStats.UseVisualStyleBackColor = false;
             // 
             // txbSearch
             // 
@@ -114,13 +101,12 @@ namespace SPCAAppGui
             // 
             // AnimalStats
             // 
-            this.AcceptButton = this.btnEnterAnimalStats;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(183)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listviewStats);
             this.Controls.Add(this.txbSearch);
-            this.Controls.Add(this.btnEnterAnimalStats);
             this.Controls.Add(this.lblSearchBy);
             this.Controls.Add(this.lblAnimalStats);
             this.Controls.Add(this.btnBackAnimalStats);
@@ -138,7 +124,6 @@ namespace SPCAAppGui
         private System.Windows.Forms.Button btnBackAnimalStats;
         private System.Windows.Forms.Label lblAnimalStats;
         private System.Windows.Forms.Label lblSearchBy;
-        private System.Windows.Forms.Button btnEnterAnimalStats;
         private System.Windows.Forms.TextBox txbSearch;
         private System.Windows.Forms.ListView listviewStats;
     }

@@ -59,6 +59,7 @@ namespace SPCAAppGui
 
         }
 
+        // Adds values into the list 
         public void PopulateListViewTable(DataView dv)
         {
             listviewStats.Items.Clear();
@@ -68,7 +69,7 @@ namespace SPCAAppGui
             }
         }
 
-
+        // When user types a name, filter the list
         private void txbSearch_TextChanged(object sender, EventArgs e)
         {
             dv.RowFilter = string.Format("Name Like '%{0}%'", txbSearch.Text);
@@ -76,6 +77,7 @@ namespace SPCAAppGui
             PopulateListViewTable(dv);
         }
 
+        
 
         private void btnBackAnimalStats_Click(object sender, EventArgs e)
         {

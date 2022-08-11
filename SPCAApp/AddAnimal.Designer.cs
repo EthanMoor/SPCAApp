@@ -65,7 +65,7 @@ namespace SPCAAppGui
             // 
             this.lblSpecies.AutoSize = true;
             this.lblSpecies.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecies.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSpecies.ForeColor = System.Drawing.Color.Black;
             this.lblSpecies.Location = new System.Drawing.Point(12, 40);
             this.lblSpecies.Name = "lblSpecies";
             this.lblSpecies.Size = new System.Drawing.Size(66, 19);
@@ -92,7 +92,7 @@ namespace SPCAAppGui
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblName.ForeColor = System.Drawing.Color.Black;
             this.lblName.Location = new System.Drawing.Point(12, 86);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(55, 19);
@@ -157,6 +157,7 @@ namespace SPCAAppGui
             this.AcceptButton = this.btnEnterAddAnimal;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(183)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAddAnimalClear);
             this.Controls.Add(this.btnBackAddAnimal);

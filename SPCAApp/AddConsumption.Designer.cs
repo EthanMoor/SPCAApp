@@ -107,7 +107,7 @@ namespace SPCAAppGui
             // 
             this.lblAddConsumptionWhichAnimal.AutoSize = true;
             this.lblAddConsumptionWhichAnimal.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddConsumptionWhichAnimal.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblAddConsumptionWhichAnimal.ForeColor = System.Drawing.Color.Black;
             this.lblAddConsumptionWhichAnimal.Location = new System.Drawing.Point(12, 42);
             this.lblAddConsumptionWhichAnimal.Name = "lblAddConsumptionWhichAnimal";
             this.lblAddConsumptionWhichAnimal.Size = new System.Drawing.Size(112, 19);
@@ -118,7 +118,7 @@ namespace SPCAAppGui
             // 
             this.lblAddConsumptionWhichDay.AutoSize = true;
             this.lblAddConsumptionWhichDay.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddConsumptionWhichDay.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblAddConsumptionWhichDay.ForeColor = System.Drawing.Color.Black;
             this.lblAddConsumptionWhichDay.Location = new System.Drawing.Point(12, 165);
             this.lblAddConsumptionWhichDay.Name = "lblAddConsumptionWhichDay";
             this.lblAddConsumptionWhichDay.Size = new System.Drawing.Size(90, 19);
@@ -129,7 +129,7 @@ namespace SPCAAppGui
             // 
             this.lblAddConsumptionHowMuchEaten.AutoSize = true;
             this.lblAddConsumptionHowMuchEaten.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddConsumptionHowMuchEaten.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblAddConsumptionHowMuchEaten.ForeColor = System.Drawing.Color.Black;
             this.lblAddConsumptionHowMuchEaten.Location = new System.Drawing.Point(228, 165);
             this.lblAddConsumptionHowMuchEaten.Name = "lblAddConsumptionHowMuchEaten";
             this.lblAddConsumptionHowMuchEaten.Size = new System.Drawing.Size(158, 19);
@@ -190,6 +190,7 @@ namespace SPCAAppGui
             this.AcceptButton = this.btnEnterAddConsumption;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(183)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listviewAddConsumption);
             this.Controls.Add(this.dtpAddConsumption);

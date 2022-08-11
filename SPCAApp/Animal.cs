@@ -60,8 +60,10 @@ namespace SPCAAppGui
         }
 
 
+        // Displays proof that an animal has been added
         public string AddAnimalReceipt()
         {
+            // String that will be displayed in AddAnimal rtb
             string addAnimalReceipt = $"Animal name: {name}\n" +
                 $"Species: {species}\n" +
                 "\n" +

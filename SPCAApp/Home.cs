@@ -28,10 +28,7 @@ namespace SPCAAppGui
             window.Show();
         }
 
-        private void HomeGUI_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnAddConsumption_Click(object sender, EventArgs e)
         {

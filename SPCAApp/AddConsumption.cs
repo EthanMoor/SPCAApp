@@ -57,6 +57,7 @@ namespace SPCAAppGui
         {
         }
 
+        // Adds values into the List
         public void PopulateListViewTable(DataView dv)
         {
             listviewAddConsumption.Items.Clear();
