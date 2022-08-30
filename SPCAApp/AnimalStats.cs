@@ -14,6 +14,7 @@ namespace SPCAAppGui
     {
         private DataTable dt;
         private DataView dv;
+        private static int selectedID = -1;
 
         AnimalManager animalManager;
         
@@ -87,8 +88,22 @@ namespace SPCAAppGui
             window.Show();
         }
 
-        
+        private void btnEnterAddConsumption_Click(object sender, EventArgs e)
+        {
 
-        
+            rtbOutputAnimalStats.Text = animalManager.GetAnimalSummary(selectedID);
+
+        }
+
+        private void listviewStats_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listviewStats.SelectedItems.Count > 0)
+            {
+                selectedID = Convert.ToInt32(listviewStats.SelectedItems[0].Text);
+
+                //MessageBox.Show(selectedID + "");
+            }
+
+        }
     }
 }

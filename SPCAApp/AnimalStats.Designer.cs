@@ -35,6 +35,8 @@ namespace SPCAAppGui
             this.lblSearchBy = new System.Windows.Forms.Label();
             this.txbSearch = new System.Windows.Forms.TextBox();
             this.listviewStats = new System.Windows.Forms.ListView();
+            this.rtbOutputAnimalStats = new System.Windows.Forms.RichTextBox();
+            this.btnEnterAddConsumption = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -52,7 +54,7 @@ namespace SPCAAppGui
             // btnBackAnimalStats
             // 
             this.btnBackAnimalStats.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBackAnimalStats.Location = new System.Drawing.Point(372, 12);
+            this.btnBackAnimalStats.Location = new System.Drawing.Point(360, 12);
             this.btnBackAnimalStats.Name = "btnBackAnimalStats";
             this.btnBackAnimalStats.Size = new System.Drawing.Size(80, 28);
             this.btnBackAnimalStats.TabIndex = 4;
@@ -84,20 +86,43 @@ namespace SPCAAppGui
             // 
             // txbSearch
             // 
-            this.txbSearch.Location = new System.Drawing.Point(16, 64);
+            this.txbSearch.Location = new System.Drawing.Point(12, 64);
             this.txbSearch.Name = "txbSearch";
-            this.txbSearch.Size = new System.Drawing.Size(229, 20);
+            this.txbSearch.Size = new System.Drawing.Size(424, 20);
             this.txbSearch.TabIndex = 19;
             this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
             // 
             // listviewStats
             // 
+            this.listviewStats.FullRowSelect = true;
             this.listviewStats.HideSelection = false;
-            this.listviewStats.Location = new System.Drawing.Point(458, 9);
+            this.listviewStats.Location = new System.Drawing.Point(12, 90);
             this.listviewStats.Name = "listviewStats";
-            this.listviewStats.Size = new System.Drawing.Size(328, 428);
+            this.listviewStats.Size = new System.Drawing.Size(424, 282);
             this.listviewStats.TabIndex = 20;
             this.listviewStats.UseCompatibleStateImageBehavior = false;
+            this.listviewStats.SelectedIndexChanged += new System.EventHandler(this.listviewStats_SelectedIndexChanged);
+            // 
+            // rtbOutputAnimalStats
+            // 
+            this.rtbOutputAnimalStats.Location = new System.Drawing.Point(446, 12);
+            this.rtbOutputAnimalStats.Name = "rtbOutputAnimalStats";
+            this.rtbOutputAnimalStats.Size = new System.Drawing.Size(342, 426);
+            this.rtbOutputAnimalStats.TabIndex = 21;
+            this.rtbOutputAnimalStats.Text = "";
+            // 
+            // btnEnterAddConsumption
+            // 
+            this.btnEnterAddConsumption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(0)))));
+            this.btnEnterAddConsumption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnterAddConsumption.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnterAddConsumption.Location = new System.Drawing.Point(12, 378);
+            this.btnEnterAddConsumption.Name = "btnEnterAddConsumption";
+            this.btnEnterAddConsumption.Size = new System.Drawing.Size(424, 60);
+            this.btnEnterAddConsumption.TabIndex = 22;
+            this.btnEnterAddConsumption.Text = "Enter";
+            this.btnEnterAddConsumption.UseVisualStyleBackColor = false;
+            this.btnEnterAddConsumption.Click += new System.EventHandler(this.btnEnterAddConsumption_Click);
             // 
             // AnimalStats
             // 
@@ -105,6 +130,8 @@ namespace SPCAAppGui
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(183)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEnterAddConsumption);
+            this.Controls.Add(this.rtbOutputAnimalStats);
             this.Controls.Add(this.listviewStats);
             this.Controls.Add(this.txbSearch);
             this.Controls.Add(this.lblSearchBy);
@@ -126,5 +153,7 @@ namespace SPCAAppGui
         private System.Windows.Forms.Label lblSearchBy;
         private System.Windows.Forms.TextBox txbSearch;
         private System.Windows.Forms.ListView listviewStats;
+        private System.Windows.Forms.RichTextBox rtbOutputAnimalStats;
+        private System.Windows.Forms.Button btnEnterAddConsumption;
     }
 }

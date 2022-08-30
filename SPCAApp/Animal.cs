@@ -11,7 +11,7 @@ namespace SPCAAppGui
         private string name;
         private string species;
         
-        private readonly Dictionary<DateTime, int> animalConsumption = new Dictionary<DateTime, int>();
+        public readonly Dictionary<DateTime, int> animalConsumption = new Dictionary<DateTime, int>();
 
         private int id;
 
@@ -84,8 +84,31 @@ namespace SPCAAppGui
 
         public string RecentlyAddedConsumption(DateTime date)
         {
-            return $"Name: {name}\nSpecies: {species}\nDate: {date.ToString("D", CultureInfo.GetCultureInfo("en-US"))}\nHow much eaten: {animalConsumption[date]}g";
+            return $"Name: {name}\nSpecies: {species}\n"+ConsumptionSummary(date);
         }
+
+        public string AnimalSummary()
+        {
+
+            string summary = "--- Animal Summary ---\n\n";
+
+            foreach (KeyValuePair<DateTime, int> consumption in animalConsumption)
+            {
+                summary += ConsumptionSummary(consumption.Key) + "\n\n";
+            }
+
+            return summary;
+
+        }
+
+        public string ConsumptionSummary(DateTime date)
+        {
+
+            return $"Date: { date.ToString("D", CultureInfo.GetCultureInfo("en-US"))}\nHow much eaten: { animalConsumption[date]}g";
+
+        }
+
+
 
     }
 

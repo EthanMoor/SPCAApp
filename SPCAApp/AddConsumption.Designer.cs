@@ -138,25 +138,20 @@ namespace SPCAAppGui
             // 
             // nudAddConsumptionHowMuchEaten
             // 
-            this.nudAddConsumptionHowMuchEaten.Location = new System.Drawing.Point(232, 187);
-            this.nudAddConsumptionHowMuchEaten.Maximum = new decimal(new int[] {
-            5000,
+            this.nudAddConsumptionHowMuchEaten.Increment = new decimal(new int[] {
+            5,
             0,
             0,
             0});
-            this.nudAddConsumptionHowMuchEaten.Minimum = new decimal(new int[] {
-            1,
+            this.nudAddConsumptionHowMuchEaten.Location = new System.Drawing.Point(232, 187);
+            this.nudAddConsumptionHowMuchEaten.Maximum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
             this.nudAddConsumptionHowMuchEaten.Name = "nudAddConsumptionHowMuchEaten";
             this.nudAddConsumptionHowMuchEaten.Size = new System.Drawing.Size(208, 20);
             this.nudAddConsumptionHowMuchEaten.TabIndex = 22;
-            this.nudAddConsumptionHowMuchEaten.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // dtpAddConsumption
             // 
