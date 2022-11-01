@@ -69,6 +69,7 @@ namespace SPCAAppGui
         public string GetRecentlyAddedConsumption(DateTime date, int id)
         {
             return animals[FindAnimal(id)].RecentlyAddedConsumption(date);
+
         }
 
         public string GetAnimalSummary(int id)

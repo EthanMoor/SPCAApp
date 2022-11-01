@@ -139,7 +139,7 @@ namespace SPCAAppGui
             // nudAddConsumptionHowMuchEaten
             // 
             this.nudAddConsumptionHowMuchEaten.Increment = new decimal(new int[] {
-            5,
+            10,
             0,
             0,
             0});
@@ -150,6 +150,7 @@ namespace SPCAAppGui
             0,
             0});
             this.nudAddConsumptionHowMuchEaten.Name = "nudAddConsumptionHowMuchEaten";
+            this.nudAddConsumptionHowMuchEaten.ReadOnly = true;
             this.nudAddConsumptionHowMuchEaten.Size = new System.Drawing.Size(208, 20);
             this.nudAddConsumptionHowMuchEaten.TabIndex = 22;
             // 
